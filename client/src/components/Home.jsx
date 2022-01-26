@@ -66,8 +66,8 @@ export default function Home (){
         e.preventDefault()
         dispatch(orderByName(e.target.value))
         setCurrentPage(1)
-        // setOrder(e.target.value)
-        setOrder(`Ordenado ${e.target.value}`)
+        //setOrder(e.target.value)
+        setOrder(`{e.target.value}`)
 
 
     }
