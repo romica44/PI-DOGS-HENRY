@@ -134,7 +134,7 @@ export default function DogCreate() {
                 image: '',
                 temperaments: [],
             });
-            navigate.push('/home');
+            navigate('/home');
         } else {
             alert('Dog can´t be created')
         }

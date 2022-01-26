@@ -6,6 +6,7 @@ export default function LandingPage(){
     return (
         <div className='divLanding'>
             <h1> Welcome my Doggy's App!</h1>
+            <div></div>
             <Link to= "/home">
                 <button className='button'>Enter</button>
             </Link>

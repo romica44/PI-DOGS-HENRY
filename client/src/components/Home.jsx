@@ -158,9 +158,12 @@ export default function Home (){
                          key={e.id}
                          name={e.name} 
                          image={e.image} 
-                         temperament={e.temperament} 
-                         minWeight={e.weightMin}
-                         maxWight={e.weightMax}/>
+                         weightMin={e.weightMin}
+                         weightMax={e.weightMax}
+                         heightMin={e.heightMin}
+                         heightMax={e.heightMax}
+                         temperaments={e.temperament}
+                        />
                     </Link>
                 </div>
                 )

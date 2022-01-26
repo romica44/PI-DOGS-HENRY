@@ -1,4 +1,5 @@
 .divLanding{
+    padding:20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
     font-style: oblique;
 
@@ -6,14 +7,14 @@
 
 .button {
     border-radius: 8px;
-    /* background-color: #ebe9e9; */
     background-color: #f1d03e;
     border: none;
     color: black;
     text-align: center;
     font-size: 28px;
+    margin-top: 40px;
     padding: 20px;
-    width: 350px;
+    width: 300px;
     transition: all 0.5s;
     cursor: pointer;
     top:10%;
@@ -21,14 +22,13 @@
     position:absolute;
   }
   
-  .button span {
+  .button {
     cursor: pointer;
     display: inline-block;
-    position: relative;
     transition: 0.5s;
   }
   
-  .button span:after {
+  .button :after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -37,11 +37,11 @@
     transition: 0.5s;
   }
   
-  .button:hover span {
+  .button:hover {
     padding-right: 25px;
   }
   
-  .button:hover span:after {
+  .button:hover:after {
     opacity: 1;
     right: 0;
   }

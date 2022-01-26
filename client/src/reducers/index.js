@@ -47,7 +47,7 @@ function rootReducer(state=initialState, action){
                 dogs: createdFilter,
             }
         case ORDER_BY_NAME:
-            let order = action.payload === "az" ? state.dogs.sort(function (a,b){
+            let order = action.payload === "asc" ? state.dogs.sort(function (a,b){
                 if (a.name > b.name) {
                     return 1;
                 }

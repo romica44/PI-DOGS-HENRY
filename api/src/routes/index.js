@@ -116,7 +116,7 @@ router.get("/dogs/:id", async (req, res)=>{
 });
 
 router.post("/dogs", async (req, res)=> {
-        const {name,heightMin,heightMax,weightMin,weightMax,life_span,createdInDb,temperament} = req.body;
+        const {name,heightMin,heightMax,weightMin,weightMax,life_span,image,createdInDb,temperament} = req.body;
         let newDog = await Dog.create({
             name,
             heightMin,
@@ -125,6 +125,7 @@ router.post("/dogs", async (req, res)=> {
             weightMax,
             life_span,
             image,
+            createdInDb
                
         });
         let temperamentDB = await Temperament.findAll({
