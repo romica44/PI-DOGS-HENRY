@@ -1,0 +1,141 @@
+.home{
+    position: absolute;
+    width: 100%;
+   
+ 
+}
+
+.divnavbar{
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #f1d03e;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  
+  .navbar li {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 0px;
+    text-decoration: none;
+  }
+  
+  .navbar input {
+    padding: 6px;
+    margin-top: 16px;
+    font-size: 17px;
+    border: none;
+    background-color: #ffe8d6;
+    color:rgb(94, 94, 94)
+  }
+
+  .dogs{
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+    margin-left: 10px;
+    justify-content: left;
+    border-color: orange;
+  }
+
+  
+  .newdog{
+    height: 43px;
+    border: solid;
+    border-color: lightgray;
+    background-color: white;
+    font-size: medium;
+    border-radius: 8px;
+    margin-top: 1px;
+    margin-right: 3px;
+    cursor: pointer;
+  }
+  .newdog:hover{
+    background-color: #f1d03e;
+    color: black;
+  }
+
+  .content-select select{
+    cursor: pointer;
+      padding: 7px 0px;
+      height: 42px;
+    font-size: 1em;
+    color: rgb(94, 94, 94);
+    border:2px solid rgba(0,0,0,0.2);
+      border-radius: 8px;
+      transition: all 0.25s ease;
+  }
+  .content-select select:hover{
+    background: #ffe8d6;
+    color: rgb(71, 71, 71);
+    border-color: rgb(71, 71, 71);
+  }
+  .content-select select option:hover{
+    background-color: #f1d03e;;
+  }
+
+
+.container {
+    display: flex;
+    -webkit-box-pack: center;
+    place-content: center;
+    align-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card-home{
+    margin: 0 5px 0 5px;
+}
+
+  .welcome {
+    border-radius: 4px;
+    background-color: #f1d03e;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    left: 37%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .welcome span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .welcome span:after {
+    content: '\00ab';
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .welcome:hover span {
+    padding-left: 25px;
+  }
+  .welcome:hover{
+    background-color: #ffe8d6;
+  }
+  
+  .welcome:hover span:after {
+    opacity: 1;
+  }
+

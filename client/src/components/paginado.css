@@ -1,0 +1,44 @@
+
+	.paginado{
+        display: flex;
+       
+        padding: 0;
+        margin: 0;
+        font-size: medium;
+        justify-content: center;
+    }
+    .paginado li {
+        display: flex;
+        background-color: #f1d03e;
+        text-align: center;
+        align-content: center;
+        border-style:ridge;
+        border-radius: 5px;
+        border-color: black;
+        padding-inline: 5px;
+    
+    }
+    
+    .paginado li button {
+        float: left;
+        padding: 8px 10px;
+        border-radius: 8px;
+        background-color: #ddbea9;
+        border: transparent;
+        margin: 3px;
+    }
+    
+    .paginado li button:hover{
+        background-color: #cb997e;
+        color: black;
+      }
+    
+    .paginado li button:active{
+        background-color: #cb997e;
+        box-shadow: 0 1px #666;
+        transform: translateY(1px);
+    }
+    
+    .paginado li button:focus{
+        background-color: #cb997e;
+    }

@@ -1,0 +1,17 @@
+.fetch{
+    height: 40px;
+    background-color: transparent;
+    border-radius: 8px;
+    width: 100px;
+    font-size:medium;
+    border-width: 2px;
+    cursor: pointer;
+  }
+  .fetch:hover{
+    border-width: 1px;
+    background-color: #f1d03e
+  }
+
+.input{
+    border-radius: 8px;
+}
