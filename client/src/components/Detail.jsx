@@ -37,7 +37,7 @@ export default function Detail(props) {
 
                         <h2>Weight:</h2><p  className='asd'  >{detailDog[0].weightMin} kgs -  {detailDog[0].weightMax} kgs </p>
 
-                        <h2>Height:</h2> <p  className='asd' > {detailDog[0].heigthMin} cm - {detailDog[0].heightMax} cm   </p> 
+                        <h2>Height:</h2> <p  className='asd' > {detailDog[0].heightMin} cm - {detailDog[0].heightMax} cm   </p> 
 
                         <h2>Life Span: </h2> <p  className='asd' > {detailDog[0].life_span} </p> 
                          < a href='/home'> 
@@ -46,8 +46,7 @@ export default function Detail(props) {
                          </a>
                     </div>
 
-            }
-           
+            }          
         </div>
 
     )
