@@ -35,11 +35,11 @@ export default function Detail(props) {
                          <h2 className='allTemps'>Temperaments:</h2><p className=''>{detailDog[0].createdInDataBase? detailDog[0].temperaments.map(el => el.name ).join(', '): detailDog[0].temperament.split(', ').map(e => e ).join(', ')}  </p> 
                         </div>
 
-                        <h2 className='' >Weight:</h2><p  className='asd'  >{detailDog[0].minweight} kgs -  {detailDog[0].maxweight} kgs </p>
+                        <h2>Weight:</h2><p  className='asd'  >{detailDog[0].weightMin} kgs -  {detailDog[0].weightMax} kgs </p>
 
-                        <h2 className='' >Height:</h2> <p  className='asd' > {detailDog[0].minheight} cm - {detailDog[0].maxheight} cm   </p> 
+                        <h2>Height:</h2> <p  className='asd' > {detailDog[0].heigthMin} cm - {detailDog[0].heightMax} cm   </p> 
 
-                        <h2 className=''>Life Span: </h2> <p  className='asd' > {detailDog[0].life_span} </p> 
+                        <h2>Life Span: </h2> <p  className='asd' > {detailDog[0].life_span} </p> 
                          < a href='/home'> 
 
                             <button  className='buttonHome1'>RETURN HOME</button>

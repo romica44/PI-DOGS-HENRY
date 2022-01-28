@@ -163,6 +163,7 @@ export default function Home (){
                          heightMin={e.heightMin}
                          heightMax={e.heightMax}
                          temperaments={e.temperament}
+                         life_span={e.life_span}
                         />
                     </Link>
                 </div>
