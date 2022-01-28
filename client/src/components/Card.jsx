@@ -8,7 +8,7 @@ export default function Card ({name,image,temperaments, weightMin, weightMax, li
             <img src={image} alt={`${name}`} width='250px' heigth='200px' className='imageDog'/>
             <h3 className='info'>Temperaments: {temperaments}</h3>
             <h3 className='info'>Weight: {weightMin} - {weightMax} kg</h3> 
-            <h3 className='info'>Life Span: {life_span} - years</h3> 
+            <h3 className='info'>Expected life span: {life_span} - years</h3> 
                 <></>
             
         </div>
