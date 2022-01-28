@@ -32,7 +32,7 @@ export default function Detail(props) {
                         <div><h1 className='name' >  {detailDog[0].name}</h1></div>
                         <img className= 'image' src={detailDog[0].image} alt='img not found' width="400px" height="250px" />
                         <div><p></p>
-                         <h2 className='allTemps'>Temperaments:</h2><p className=''>{detailDog[0].createdInDataBase? detailDog[0].temperaments.map(el => el.name ).join(', '): detailDog[0].temperament.split(', ').map(e => e ).join(', ')}  </p> 
+                         <h2 className='allTemps'>Temperaments:</h2><p className=''>{detailDog[0].createdInDb? detailDog[0].temperaments.map(el => el.name ).join(', '): detailDog[0].temperament.split(', ').map(e => e ).join(', ')}  </p> 
                         </div>
 
                         <h2>Weight:</h2><p  className='asd'  >{detailDog[0].weightMin} kgs -  {detailDog[0].weightMax} kgs </p>
