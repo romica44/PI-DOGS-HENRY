@@ -71,7 +71,7 @@ export default function DogCreate() {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const allTemperaments = useSelector((state) => state.temperaments);
+    const allTemperaments = useSelector((state) => state.temperament);
 
     const [errors, setErrors] = useState({});
 

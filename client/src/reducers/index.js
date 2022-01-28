@@ -38,9 +38,9 @@ function rootReducer(state=initialState, action){
         case FILTER_CREATED:
             const allDogsCreated = state.filterDogs
             const createdFilter= action.payload === 'created'?
-            allDogsCreated.filter((e)=> e.createdInDB):
+            allDogsCreated.filter((e)=> e.createdInDb):
             action.payload === 'api' ?
-            allDogsCreated.filter((e)=> !e.createdInDB):
+            allDogsCreated.filter((e)=> !e.createdInDb):
             action.pay === 'all' && allDogsCreated
             return {
                 ...state,
@@ -72,10 +72,10 @@ function rootReducer(state=initialState, action){
         case ORDER_BY_WEIGHT:
             let sortArrayW= action.payload === 'desc' ?
             state.dogs.sort((a,b)=>{
-                return b.minweight - a.minweight
+                return b.weightMin - a.weightMin
             }):
             state.dogs.sort((a,b)=> {
-                return a.minweight - b.minweight
+                return a.weightMin - b.weightMin
             })
             return{
                 ...state,

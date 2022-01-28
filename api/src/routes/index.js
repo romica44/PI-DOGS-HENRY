@@ -125,11 +125,12 @@ router.post("/dogs", async (req, res)=> {
             weightMax,
             life_span,
             image,
-            createdInDb
+            createdInDb,
+            temperament
                
         });
         let temperamentDB = await Temperament.findAll({
-            where: {name: temperament } //le pido que busque las que coincidan con el temperament que llega por body
+            where: {name: temperaments } //le pido que busque las que coincidan con el temperament que llega por body
         });
         newDog.addTemperament(temperamentDB) //le pido que agregue las que coincidieron con el tmeperament pasado por body
          res.status(200).send('New dog was created');

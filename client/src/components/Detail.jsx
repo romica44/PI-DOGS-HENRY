@@ -39,7 +39,7 @@ export default function Detail(props) {
 
                         <h2 className='' >Height:</h2> <p  className='asd' > {detailDog[0].minheight} cm - {detailDog[0].maxheight} cm   </p> 
 
-                        <h2 className=''>Life Span: </h2> <p  className='' > {detailDog[0].life_span} </p> 
+                        <h2 className=''>Life Span: </h2> <p  className='asd' > {detailDog[0].life_span} </p> 
                          < a href='/home'> 
 
                             <button  className='buttonHome1'>RETURN HOME</button>
