@@ -116,7 +116,7 @@ router.get("/dogs/:id", async (req, res)=>{
 });
 
 router.post("/dogs", async (req, res)=> {
-        const {name,heightMin,heightMax,weightMin,weightMax,life_span,image,createdInDb,temperament} = req.body;
+        const {name,heightMin,heightMax,weightMin,weightMax,life_span,image,createdInDb,temperaments} = req.body;
         let newDog = await Dog.create({
             name,
             heightMin,
@@ -125,14 +125,12 @@ router.post("/dogs", async (req, res)=> {
             weightMax,
             life_span,
             image,
-            createdInDb,
-            temperament
-               
+            createdInDb,               
         });
-        let temperamentDB = await Temperament.findAll({
-            where: {name: temperaments } //le pido que busque las que coincidan con el temperament que llega por body
-        });
-        newDog.addTemperament(temperamentDB) //le pido que agregue las que coincidieron con el tmeperament pasado por body
+        // let temperamentDB = await Temperament.findAll({
+        //     where: {name: temperaments } //le pido que busque las que coincidan con el temperament que llega por body
+        // });
+        await newDog.setTemperaments(temperaments).then(data => data,err => console.log(err)); //le pido que agregue las que coincidieron con el tmeperament pasado por body
          res.status(200).send('New dog was created');
 
 });
