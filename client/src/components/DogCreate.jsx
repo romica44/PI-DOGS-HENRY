@@ -71,7 +71,7 @@ export default function DogCreate() {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const allTemperaments = useSelector((state) => state.temperament);
+    const allTemperaments = useSelector((state) => state.temperaments);
 
     const [errors, setErrors] = useState({});
 
@@ -212,7 +212,7 @@ export default function DogCreate() {
                             return 0;
                         }).map(temp => {
                             return (
-                                <option value={temp.name} key={temp.id}>{temp.name}</option>
+                                <option value={temp.id} key={temp.id}>{temp.name}</option>
                             )
                         })}
                     </select>
