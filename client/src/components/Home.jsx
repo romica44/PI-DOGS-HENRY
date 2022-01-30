@@ -48,9 +48,10 @@ export default function Home (){
 
     function handleSelect(e){
         e.preventDefault()
+        setCurrentPage(1)
         dispatch(filterByTemperaments(e.target.value))
         // setTemperament(e.target.value)
-        setCurrentPage(1)
+       
     }
 
     const [, setBreeds] = useState('all')
@@ -107,14 +108,14 @@ export default function Home (){
                 </li>
                 <li className='content-select'>
                     <select onChange= {e=> handleByWeight(e)}>
-                        <option value='selected'hidden>Sort by weight</option>
+                        <option value='selected' hidden >Sort by weight</option>
                         <option value='asc'>Lighter to heavier</option>
                         <option value='desc'>Heavier to lighter</option>
                     </select>
                 </li>
                 <li className='content-select'>
                     <select onChange={e=> handleSelect(e)}>
-                    <option key={0} value='all'>All temperaments</option>
+                    <option key={0} value='all' hidden >All temperaments</option>
                         {allTemperaments?.sort(function (a, b) {
                           if (a.name < b.name) return -1;
                           if (a.name > b.name) return 1;
@@ -130,7 +131,7 @@ export default function Home (){
                 </li>
                 <li className='content-select'>
                     <select onChange={e=> handleFilterCreated(e)}>
-                        <option value='all'>All breeds</option>
+                        <option value='all' hidden >All breeds</option>
                         <option value='api'>Existent breeds</option>
                         <option value='created'>Created breeds</option>
                     </select>

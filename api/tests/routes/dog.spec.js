@@ -22,3 +22,23 @@ describe('Videogame routes', () => {
     );
   });
 });
+
+const testRoutes = session(app);
+const dog = {
+  name: 'Terrier',
+};
+
+describe('Dogs routes', () => {
+  before(() => conn.authenticate()
+  .catch((err) => {
+    console.error('Unable to connect to the database:', err);
+  }));
+  beforeEach(() => Dog.sync({ force: true })
+    .then(() => Dog.create(dog)));
+  describe('GET /dogs', () => {
+    it('should get 200', () =>
+    testRoutes.get('/dogs').expect(200)
+    );
+  });
+});
+

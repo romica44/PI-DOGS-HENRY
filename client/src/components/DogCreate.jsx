@@ -130,7 +130,7 @@ export default function DogCreate() {
                 heightMax: '',
                 weightMin: '',
                 weightMax: '',
-                life_span: '',
+                life_span: '', 
                 image: '',
                 temperaments: [],
             });
@@ -194,7 +194,7 @@ export default function DogCreate() {
                 <div>
                     <label><strong>Expected life span: </strong></label>
                     <input type='text' value={input.life_span} name='life_span' onChange={e => handleChange(e)} />
-                    <label><strong> years</strong></label>
+                    <label><strong>years</strong></label>
                     {errors.life_span && (
                         <p className='error'><strong>{errors.life_span}</strong></p>
                     )}
