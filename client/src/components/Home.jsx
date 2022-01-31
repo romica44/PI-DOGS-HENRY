@@ -40,18 +40,14 @@ export default function Home (){
     function handleClick(e){ // resetea todo, carga todo de nuevo
        e.preventDefault(); //se coloca de forma preventiva
         dispatch(getAll());
-        // setBreeds('all');
-        // setOrderWeight("");
-        // setTemperament('All');
         setCurrentPage(1)
     }
 
     function handleSelect(e){
         e.preventDefault()
         setCurrentPage(1)
-        dispatch(filterByTemperaments(e.target.value))
-        // setTemperament(e.target.value)
-       
+        dispatch(filterByTemperaments(e.target.value)) //accedo al valor que se hace click en la web
+             
     }
 
     const [, setBreeds] = useState('all')
@@ -67,8 +63,7 @@ export default function Home (){
         e.preventDefault()
         dispatch(orderByName(e.target.value))
         setCurrentPage(1)
-        //setOrder(e.target.value)
-        setOrder(`{e.target.value}`)
+        setOrder(`Ordenado ${e.target.value}`)
 
 
     }
@@ -131,7 +126,7 @@ export default function Home (){
                 </li>
                 <li className='content-select'>
                     <select onChange={e=> handleFilterCreated(e)}>
-                        <option value='all' hidden >All breeds</option>
+                        <option value='all' hidden>All breeds</option>
                         <option value='api'>Existent breeds</option>
                         <option value='created'>Created breeds</option>
                     </select>

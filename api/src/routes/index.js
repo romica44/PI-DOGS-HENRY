@@ -72,27 +72,16 @@ router.get("/dogs", async (req, res)=>{
 
 router.get("/temperaments", async(req, res)=>{
         let temperamentApi = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
-        let tempMap = temperamentApi.data.map( e => e.temperament).toString(); //mapeo toda la data de temperamentos
-        tempMap = await tempMap.split(', '); // separo los string con ,
-        const tempSpace = await tempMap.map(e => {
-            if (e[0] == ' '){
-                return e.split('')
-            }
-            return e;
-        })
-        const tempNotSpace = await tempSpace.map(e => { //vuelvo a mapear 
-            if (Array.isArray(e)){
-                e.shift();
-                return e.join('')
-            }
-            return e;
-        })
+        let tempMapeo = temperamentApi.data.map( e => e.temperament).toString(); //mapeo toda la data de temperamentos
+        tempMapeo = await tempMapeo.split(', '); // separo los strings
+              const tempSpace = await tempMapeo.map(e => e.trim()); //elimino los espacios en blanco
+        const tempNotRepeat = [...new Set(tempSpace)]; //con el constructor Set creo un objeto donde guardo los valores
 
-        await tempNotSpace.forEach(e =>{
-            if(e != ''){
-                Temperament.findOrCreate({
+        tempNotRepeat.forEach( async (e) =>{ //para cada uno entra al modelo temperament y hace un findorcreate
+            if(e){
+                await Temperament.findOrCreate({ //es un metodo de Sequelize p/chequear si un elemento existe en la DB y sino lo crea
                     where: {
-                        name: e
+                         name: e
                     },
                 })
             }
