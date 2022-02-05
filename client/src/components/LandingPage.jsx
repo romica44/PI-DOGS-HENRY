@@ -5,7 +5,7 @@ import './landingPage.css'
 export default function LandingPage(){
     return (
         <div className='divLanding'>
-            <h1 className='doggy'> Welcome my Doggy's App!</h1>
+            <h1 className='doggy'>  wELCOME TO MY DOGGIE'S APP!</h1>
             <div></div>
             <Link to= "/home">
                 <button type='image' className='button'>Enter</button>

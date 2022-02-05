@@ -1,26 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 .divLanding{
     padding:20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    
     font-style: oblique;
 
 }
 
-
+.doggy {
+ font-family: 'Indie Flower', cursive;
+ font-size: 50PX;
+}
 
 .button {
-    border-radius: 8px;
+    border-radius: 50px;
     background-color: #f1d03e;
     border: none;
     color: black;
     text-align: center;
-    font-size: 28px;
-    margin-top: 40px;
+    font-size: 24px;
+    margin-top: 90px;
     padding: 20px;
-    width: 300px;
+    width: 150px;
     transition: all 0.5s;
     cursor: pointer;
     top:10%;
-    left: 38%;
+    left: 45%;
     position:absolute;
   }
   
@@ -48,3 +53,5 @@
     opacity: 1;
     right: 0;
   }
+
+

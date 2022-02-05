@@ -63,9 +63,7 @@ export default function Home (){
         e.preventDefault()
         dispatch(orderByName(e.target.value))
         setCurrentPage(1)
-        setOrder(`Ordenado ${e.target.value}`)
-
-
+        setOrder(`Ordenado ${e.target.value}`) //modifica el estado para que haga el ordenamiento
     }
 
     const [, setOrderWeight] = useState("")
@@ -137,7 +135,7 @@ export default function Home (){
             </ul>
         </div>
 
-        <h1>DOGGIES</h1>
+        <h1 className='titleDog'>DOGGIES</h1>
 {/* 
         <Paginado
         dogsPerPage= {dogsPerPage}
