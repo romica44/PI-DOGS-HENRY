@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const axios = require ('axios');
 const {Dog, Temperament} = require ('../db');
-const {API_KEY} = process.env;
+//const {API_KEY} = process.env;
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -13,7 +13,7 @@ const router = Router();
 
 
 const getFromApi = async () => {
-    const api = await axios.get (`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`);
+    const api = await axios.get ('https://api.thedogapi.com/v1/breeds?api_key=a7d776a1-c18f-4067-a71b-bb9de8a53d94');
     const dogList = await api.data.map(e =>{
         return {
             id: e.id,
@@ -71,7 +71,7 @@ router.get("/dogs", async (req, res)=>{
     });
 
 router.get("/temperaments", async(req, res)=>{
-        let temperamentApi = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
+        let temperamentApi = await axios.get('https://api.thedogapi.com/v1/breeds?api_key=a7d776a1-c18f-4067-a71b-bb9de8a53d94')
         let tempMapeo = temperamentApi.data.map( e => e.temperament).toString(); //mapeo toda la data de temperamentos
         tempMapeo = await tempMapeo.split(', '); // separo los strings
               const tempSpace = await tempMapeo.map(e => e.trim()); //elimino los espacios en blanco
